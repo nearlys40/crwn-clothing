@@ -11,14 +11,14 @@ const config = {
     messagingSenderId: "1095731692620",
     appId: "1:1095731692620:web:7b396943182151ce5ba0e9",
     measurementId: "G-VLKQQSGVXT"
-  };
+};
 
-  firebase.initializeApp(config)
-  export const auth = firebase.auth()
-  export const firestore = firebase.firestore()
+firebase.initializeApp(config)
+export const auth = firebase.auth()
+export const firestore = firebase.firestore()
 
-  const provider = new firebase.auth.GoogleAuthProvider()
-  provider.setCustomParameters({ prompt: 'select_account' })
-  export const signInWithGoogle = () => auth.signInWithPopup(provider)
+const provider = new firebase.auth.GoogleAuthProvider()
+provider.setCustomParameters({ prompt: 'select_account' })
+export const signInWithGoogle = () => auth.signInWithPopup(provider)
 
-  export default firebase;
+export default firebase;
